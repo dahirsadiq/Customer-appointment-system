@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appointment Booking</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+  <header>
+  <nav class="navbar">
+    <h2 class="logo">BookIt</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="appointment.html" class="active">Book</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+  </nav>
+<body>
+  <form id="appointmentForm" class="appointment-container">
+    <h1> Book an Appointment</h1>
+
+    <!-- <input type="hidden" id="appointmentId" /> -->
+
+    
+      <label for="name">Your Name</label>
+      <input type="text" id="name" required /> <br><br>
+    
+
+    
+      <label for="email">Email</label>
+      <input type="email" id="email" required /> <br><br>
+    
+
+   
+      <label for="date">Date</label>
+      <input type="date" id="date" required /> <br><br>
+  
+
+    
+      <label for="time">Time</label>
+      <input type="time" id="time" required /> <br><br>
+   
+
+    
+      <label for="desc">Description</label>
+      <textarea id="desc" rows="2"></textarea><br><br>
+   
+
+    <button type="submit" id="saveBtn">Submit</button>
+
+    <p style="text-align:center; margin-top:20px;">
+      <a href="admin.html"> Go to Admin Dashboard</a>
+    </p>
+
+    <h2>My Appointments</h2>
+    <div id="appointmentsList"></div>
+  </form>
+ <script src="../js/appointment.js"></script>
+
+</body>
+</html>
