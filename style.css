@@ -25,6 +25,7 @@ h1, h2 {
   text-align: center;
   color: #333;
 }
+
 label {
   display: block;
   font-weight: bold;
@@ -50,3 +51,22 @@ button {
 button:hover {
   background: #005fa3;
 }
+.appointment {
+  background: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.actions button {
+  width: auto;
+  margin-right: 5px;
+}
+
+.status {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
