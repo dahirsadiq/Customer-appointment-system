@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #0077cc;
+  background: #92c9f0;
   padding: 15px 30px;
   color: white;
 }
@@ -31,6 +31,65 @@ body {
 .navbar a.active, .navbar a:hover {
   text-decoration: underline;
 }
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #6491b1, #5ba8cf);
+  color: white;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: white;
+  color: #0077cc;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.services, .contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.service-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+.service {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #ccc;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+}
+.contact input, .contact textarea, .contact button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.contact button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  background: #0077cc;
+  color: white;
+  padding: 10px;
+}
+
+
 
 
 /* appointment form style */
