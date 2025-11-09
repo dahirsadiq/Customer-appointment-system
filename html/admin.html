@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <header>
+ <header>
     <nav class="navbar">
       <h2 class="logo">BookIt Admin</h2>
       <ul>
@@ -21,8 +21,8 @@
   <section class="admin-login" id="loginSection">
     <h1>Admin Login</h1>
     <form id="loginForm">
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="password" id="password" placeholder="Password" required>
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
       <button type="submit">Login</button>
     </form>
     <p id="loginError"></p>
@@ -30,7 +30,21 @@
 
   <section class="dashboard" id="dashboard" style="display:none;">
     <h1>Admin Dashboard</h1>
-    <div id="adminAppointments"></div>
+    <table id="appointmentsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="appointmentsBody">
+        <!-- Appointments injected here -->
+      </tbody>
+    </table>
   </section>
 
   <script src="../js/admin.js"></script>

@@ -76,4 +76,4 @@ const getAppointments = () => {
     });
   }
   // call function display to the DOM
-  displayUserAppointments();
+ // displayUserAppointments();
