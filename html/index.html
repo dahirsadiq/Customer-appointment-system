@@ -16,10 +16,14 @@
         <li><a href="appointment.html">Book</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="admin.html">Admin</a></li>
+        <!-- <li><a href="admin.html">Admin</a></li> -->
+         <li><a href="#track">Track Status</a></li>
       </ul>
     </nav>
   </header>
+  
+
+ 
 
   <section class="hero">
     <h1>Book Appointments Easily</h1>
@@ -54,6 +58,14 @@
       <button type="submit">Send Message</button>
     </form>
     <p id="contactStatus"></p>
+  </section>
+   <section id="track" class="track-section">
+    <h1>Track Appointment Status</h1>
+    <form id="trackForm">
+      <input type="email" id="trackEmail" placeholder="Enter your email" required />
+      <button type="submit">Check Status</button>
+    </form>
+    <div id="trackResult"></div>
   </section>
 
   <footer>

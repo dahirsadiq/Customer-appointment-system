@@ -52,28 +52,3 @@ const getAppointments = () => {
       console.error("Error saving appointments:", err);
     }
   };
-
-  // display appointments to the page (DOM)
-  function displayUserAppointments() {
-    const list = document.getElementById("appointmentsList");
-    if (!list) return;
-
-    const apps = getAppointments();
-    list.innerHTML = "";
-
-   
-    apps.forEach((a) => {
-      const div = document.createElement("div");
-      div.className = "appointment";
-      div.innerHTML = `
-        <h3>${a.name}</h3>
-        <p><strong>Date:</strong> ${a.date}</p>
-        <p><strong>Time:</strong> ${a.time}</p>
-        <p><strong>Desc:</strong> ${a.desc}</p>
-        <p>Status: <span class="status">${a.status}</span></p>
-      `;
-      list.appendChild(div);
-    });
-  }
-  // call function display to the DOM
- // displayUserAppointments();
