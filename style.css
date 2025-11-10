@@ -32,6 +32,8 @@ body {
   text-decoration: underline;
 }
 .hero {
+  margin-top: 20px;
+  max-width: 960px;
   text-align: center;
   padding: 100px 20px;
   background: linear-gradient(to right, #6491b1, #5ba8cf);
@@ -152,30 +154,7 @@ button:hover {
 }
 
 /* admin form style */
-.navbar {
-      background: #2c3e50;
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1em 2em;
-    }
 
-    .navbar .logo {
-      font-size: 1.5em;
-    }
-
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5em;
-    }
-
-    .navbar ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
 
     section {
       padding: 2em;

@@ -18,7 +18,7 @@ document.getElementById("appointmentForm").addEventListener("submit", (e) => {
     const newAppointment = {
       id: Date.now().toString(),
       name,
-      // email,
+      email,
       date,
       time,
       desc,
