@@ -8,6 +8,8 @@ const authTitle = document.getElementById("authTitle");
 const authBtn = document.getElementById("authBtn");
 const toggleAuthLink = document.getElementById("toggleAuthLink");
 const toggleAuthText = document.getElementById("toggleAuthText");
+const confirmPasswordContainer = document.getElementById("confirmPasswordContainer");
+const emailContainer = document.getElementById("emailContainer");
 
 toggleAuthLink.addEventListener("click", (e) => {
   e.preventDefault();
@@ -18,11 +20,16 @@ toggleAuthLink.addEventListener("click", (e) => {
     authBtn.textContent = "Sign Up";
     toggleAuthText.textContent = "Already have an account?";
     toggleAuthLink.textContent = "Login";
+     confirmPasswordContainer.style.display = "block";
+    emailContainer.style.display = "block";
   } else {
     authTitle.textContent = "Admin Login";
     authBtn.textContent = "Login";
     toggleAuthText.textContent = "Don’t have an account?";
     toggleAuthLink.textContent = "Sign up";
+     confirmPasswordContainer.style.display = "none";
+    emailContainer.style.display = "none";
+    
   }
 
   document.getElementById("loginError").innerText = "";
@@ -33,12 +40,22 @@ document.getElementById("loginForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const username = document.getElementById("username").value.trim();
   const password = document.getElementById("password").value.trim();
+  
+  const email = document.getElementById("email") ? document.getElementById("email").value.trim() : "";
+  const confirmPassword = document.getElementById("confirmPassword")
+    ? document.getElementById("confirmPassword").value.trim()
+    : "";
   const errorEl = document.getElementById("loginError");
 
-  if (!username || !password) {
+  if (!username || !password || (isSignUpMode && (!email || !confirmPassword))) {
     errorEl.innerText = "Please fill in all fields.";
     return;
   }
+    if (isSignUpMode && password !== confirmPassword) {
+    errorEl.innerText = "Passwords do not match!";
+    return;
+  }
+
 
   // Load admin accounts
   let admins = JSON.parse(localStorage.getItem("admins")) || [];
@@ -49,14 +66,21 @@ document.getElementById("loginForm").addEventListener("submit", (e) => {
       errorEl.innerText = "Username already exists!";
       return;
     }
+     if (admins.some(a => a.email === email)) {
+      errorEl.innerText = "Email already registered!";
+      return;
+    }
     admins.push({ username, password });
     localStorage.setItem("admins", JSON.stringify(admins));
     alert("Account created! Please login.");
+
     isSignUpMode = false;
     authTitle.textContent = "Admin Login";
     authBtn.textContent = "Login";
     toggleAuthText.textContent = "Don’t have an account?";
     toggleAuthLink.textContent = "Sign up";
+    confirmPasswordContainer.style.display = "none";
+    emailContainer.style.display = "none";
     e.target.reset();
   } else {
     // Login
@@ -153,5 +177,9 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
 window.onload = () => {
   if (localStorage.getItem("isAdmin") === "true") {
     showDashboard();
+  }
+  else{
+     confirmPasswordContainer.style.display = "none";
+    emailContainer.style.display = "none";
   }
 };
