@@ -1,5 +1,5 @@
 
-// Handle signup/login toggle
+// signup/login toggle
 let isSignUpMode = false;
 const authTitle = document.getElementById("authTitle");
 const authBtn = document.getElementById("authBtn");
