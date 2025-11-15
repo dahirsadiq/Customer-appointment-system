@@ -152,6 +152,68 @@ button:hover {
   font-weight: bold;
   text-transform: uppercase;
 }
+/* Hide bars Desktop menu */
+.menu-icon{
+  display: none;
+}
+
+/* MOBILE VIEW  */
+
+@media (max-width: 766px) {
+
+  
+  .navbar {
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .navbar ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #92c9f0;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
+    display: none; 
+  }
+
+  .navbar ul.active {
+    display: flex; 
+  }
+
+  /* Hamburger */
+  .menu-icon {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: block;
+  }
+
+  
+  .navbar ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+ 
+  .service-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  /* Appointment form */
+  .appointment-container {
+    width: 95%;
+  }
+
+}
+
 
 /* admin form style */
 

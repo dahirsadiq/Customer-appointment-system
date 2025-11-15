@@ -1,3 +1,13 @@
+
+// this is for mobile nav code
+ const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.querySelector(".navbar ul");
+
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+  // this is for track status code
+  
 document.getElementById("trackForm").addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -43,3 +53,5 @@ document.getElementById("trackForm").addEventListener("submit", (e) => {
   html += "</table>";
   resultDiv.innerHTML = html;
 });
+
+
