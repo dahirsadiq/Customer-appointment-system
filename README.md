@@ -13,7 +13,7 @@ The system supports both User and Administrator roles, offering an intuitive int
 
 * Manage users
 
-* Approve or reject appointment requests
+* Approve or reject or reschedule appointment requests
 
 * View and manage all bookings through the admin dashboard
 
