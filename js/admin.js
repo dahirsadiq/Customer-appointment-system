@@ -1,6 +1,3 @@
-// ========================
-// Admin Authentication
-// ========================
 
 // Handle signup/login toggle
 let isSignUpMode = false;
@@ -95,9 +92,7 @@ document.getElementById("loginForm").addEventListener("submit", (e) => {
   }
 });
 
-// ========================
 // Dashboard Functions
-// ========================
 
 function showDashboard() {
   document.getElementById("authSection").style.display = "none";
@@ -128,16 +123,16 @@ function renderAdminAppointments() {
         <button class="btn btn-approve" data-id="${a.id}">Approve</button>
         <button class="btn btn-reject" data-id="${a.id}">Reject</button>
         <button class="btn btn-reschedule" data-id="${a.id}">Reschedule</button>
-        <button class="btn btn-delete" data-id="${a.id}">Delete</button>
+       
       </td>
     `;
     tbody.appendChild(tr);
   });
 
   document.querySelectorAll(".btn-approve").forEach(btn => btn.addEventListener("click", () => updateStatus(btn.dataset.id, "approved")));
-  document.querySelectorAll(".btn-reject").forEach(btn => btn.addEventListener("click", () => updateStatus(btn.dataset.id, "declined")));
+  document.querySelectorAll(".btn-reject").forEach(btn => btn.addEventListener("click", () => updateStatus(btn.dataset.id, "Reject")));
   document.querySelectorAll(".btn-reschedule").forEach(btn => btn.addEventListener("click", () => rescheduleAppointment(btn.dataset.id)));
-  document.querySelectorAll(".btn-delete").forEach(btn => btn.addEventListener("click", () => deleteAppointment(btn.dataset.id)));
+
 }
 
 function updateStatus(id, status) {
